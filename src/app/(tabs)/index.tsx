@@ -1,16 +1,13 @@
-import { Link, Stack } from "expo-router"
+import { Link } from "expo-router"
 import { StyleSheet, Text, View } from "react-native"
 
-import CurrentWeather from "../CurrentWeather"
-import Forecast from "../Forecast"
+import { CurrentWeather, Forecast } from "#shared/weather"
 
 const location = { name: "Barcelona", latitude: 41.385063, longitude: 2.173404 }
 
 const App: React.FC = () => {
   return (
     <>
-      <Stack.Screen options={{ title: "Home" }} />
-
       <View style={styles.container}>
         <Text>Weather App</Text>
 
