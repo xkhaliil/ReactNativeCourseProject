@@ -5,6 +5,7 @@
   "type": "module",
   "main": "expo-router/entry",
   "imports": {
+    "#design/*": "./src/shared/design/*/index.ts",
     "#shared/*": "./src/shared/*/index.ts"
   },
   "scripts": {
@@ -17,13 +18,15 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "@react-navigation/drawer": "^7.10.2",
     "expo": "~54.0.33",
-    "expo-screen-orientation": "~9.0.9",
     "expo-constants": "~18.0.13",
     "expo-linking": "~8.0.12",
     "expo-router": "~6.0.23",
+    "expo-screen-orientation": "~9.0.9",
     "expo-status-bar": "~3.0.9",
+    "expo-system-ui": "~6.0.9",
     "react": "19.1.0",
     "react-native": "0.81.5",
     "react-native-gesture-handler": "~2.28.0",

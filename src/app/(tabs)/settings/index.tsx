@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, View } from "react-native"
+
+import Typography from "#design/elements/Typegraphy"
 
 const App: React.FC = () => {
   return (
     <>
       <View style={styles.container}>
-        <Text>Settings</Text>
+        <Typography variant="title">Settings</Typography>
       </View>
     </>
   )
