@@ -1,10 +1,10 @@
 import { StyleSheet, View } from "react-native"
 
 import Typography from "#design/elements/Typegraphy"
-import { CurrentWeather, Forecast, useLocation } from "#shared/weather"
+import { CurrentWeather, Forecast, useCurrentLocation } from "#shared/weather"
 
 const App: React.FC = () => {
-  const location = useLocation()
+  const location = useCurrentLocation()
 
   return (
     <>
