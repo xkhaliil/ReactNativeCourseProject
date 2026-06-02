@@ -32,12 +32,12 @@ const codeMap = {
 } as const
 
 export type WeatherCode = keyof typeof codeMap
-export type Weather = (typeof codeMap)[WeatherCode]
+export type Weather = (typeof codeMap)[WeatherCode] | "Unknown"
 
 export default function toWeather(input: number): Weather {
   if (input in codeMap) {
     return codeMap[input as WeatherCode]
   }
 
-  throw new Error("toWeather: Invalid input.")
+  return "Unknown"
 }
