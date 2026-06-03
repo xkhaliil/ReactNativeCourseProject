@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import { useEffect, useState } from "react"
 
-import { getLocation, lookupLocation } from "#shared/location"
+import { getLocation, lookupLocation } from "#shared/device/location"
 
 import { type WeatherLocation } from "./types"
 

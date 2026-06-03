@@ -12,7 +12,7 @@ export async function configureLocation(): Promise<boolean> {
 
   const { status } = await Location.requestForegroundPermissionsAsync()
   if (status !== Location.PermissionStatus.GRANTED) {
-    console.log("Permission to access location was denied")
+    console.warn("Permission to access location was denied")
 
     configured = false
     return false

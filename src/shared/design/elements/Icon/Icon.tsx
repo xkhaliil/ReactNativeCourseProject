@@ -6,8 +6,11 @@ export type IconProps = {
 } & Omit<React.ComponentProps<typeof FontAwesome>, "name">
 
 const icons = {
-  home: "home",
+  add: "plus",
+  close: "close",
   favorites: "star",
+  home: "home",
+  save: "save",
   settings: "gear",
 } as const
 

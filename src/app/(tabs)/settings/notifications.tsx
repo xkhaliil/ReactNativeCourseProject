@@ -3,7 +3,7 @@ import { Button, StyleSheet, View } from "react-native"
 import ToggleField from "#design/elements/fields/Toggle"
 import FormGroup from "#design/elements/FormGroup"
 import Typography from "#design/elements/Typegraphy"
-import { createNotification } from "#shared/notifications"
+import { createNotification } from "#shared/device/notifications"
 import { useSettings, useSettingsSetter } from "#shared/settings"
 
 const App: React.FC = () => {

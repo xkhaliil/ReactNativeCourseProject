@@ -55,8 +55,12 @@ export const Forecast: React.FC<{
       <ScrollView horizontal style={styles.days}>
         {data?.map(({ day, temperatureMax, temperatureMin, condition }) => (
           <View key={day} style={styles.day}>
-            <Typography variant="large">{temperatureMax} C</Typography>
-            <Typography variant="muted">{temperatureMin} C</Typography>
+            <Typography variant="large">
+              {temperatureMax.toFixed(1)} C
+            </Typography>
+            <Typography variant="muted">
+              {temperatureMin.toFixed(1)} C
+            </Typography>
             <Typography variant="label">{condition}</Typography>
           </View>
         ))}
