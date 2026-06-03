@@ -47,14 +47,14 @@ From the Expo dev server, press `a` (Android emulator), `i` (iOS simulator), or 
 
 ### Commands
 
-| Command | Purpose |
-| --- | --- |
-| `npm start` | Start Expo dev server (`expo start --clear`) |
-| `npm run lint` | Typecheck, ESLint, Prettier check, and Knip |
-| `npm run lint-typecheck` | TypeScript only (`tsc --noEmit`) |
-| `npm run test` | Jest in watch mode |
-| `npm run test:ci` | Jest once with coverage (used in CI) |
-| `npm run build` | EAS Android build (non-interactive) |
+| Command                  | Purpose                                      |
+| ------------------------ | -------------------------------------------- |
+| `npm start`              | Start Expo dev server (`expo start --clear`) |
+| `npm run lint`           | Typecheck, ESLint, Prettier check, and Knip  |
+| `npm run lint-typecheck` | TypeScript only (`tsc --noEmit`)             |
+| `npm run test`           | Jest in watch mode                           |
+| `npm run test:ci`        | Jest once with coverage (used in CI)         |
+| `npm run build`          | EAS Android build (non-interactive)          |
 
 ### Before you push
 
@@ -80,27 +80,27 @@ src/
     settings/             # App settings service
 ```
 
-| Modlet alias | Public entry | Example import |
-| --- | --- | --- |
-| `#features/*` | `src/features/*/index.ts` | `#features/favorites` |
-| `#design/*` | `src/shared/design/*/index.ts` | `#design/elements/Icon` |
-| `#shared/*` | `src/shared/*/index.ts` | `#shared/weather` |
+| Modlet alias  | Public entry                   | Example import          |
+| ------------- | ------------------------------ | ----------------------- |
+| `#features/*` | `src/features/*/index.ts`      | `#features/favorites`   |
+| `#design/*`   | `src/shared/design/*/index.ts` | `#design/elements/Icon` |
+| `#shared/*`   | `src/shared/*/index.ts`        | `#shared/weather`       |
 
 Import from each module’s `index.ts` barrel—never from deep paths inside another feature or shared package.
 
 ### Course concepts in the codebase
 
-| Concept | Location |
-| --- | --- |
-| File-based routing | `src/app/(tabs)/`, `src/app/(tabs)/favorites/[id].tsx` |
-| Feature-based organization | `src/features/favorites/` |
-| Design system | `src/shared/design/` |
-| Weather API | `src/shared/weather/CurrentWeather.tsx`, `Forecast.tsx` |
-| Custom hooks | `useCurrentLocation`, `useFavorites`, `useFavoriteMutations` |
-| Local persistence | `src/features/favorites/favorites.ts` |
-| FlatList / SectionList | `src/app/(tabs)/settings/flat-list.tsx`, `section-list.tsx` |
-| Device capabilities | `src/shared/device/` |
-| Unit tests | `*.test.tsx` alongside components; `toWeather.test.tsx` |
+| Concept                    | Location                                                     |
+| -------------------------- | ------------------------------------------------------------ |
+| File-based routing         | `src/app/(tabs)/`, `src/app/(tabs)/favorites/[id].tsx`       |
+| Feature-based organization | `src/features/favorites/`                                    |
+| Design system              | `src/shared/design/`                                         |
+| Weather API                | `src/shared/weather/CurrentWeather.tsx`, `Forecast.tsx`      |
+| Custom hooks               | `useCurrentLocation`, `useFavorites`, `useFavoriteMutations` |
+| Local persistence          | `src/features/favorites/favorites.ts`                        |
+| FlatList / SectionList     | `src/app/(tabs)/settings/flat-list.tsx`, `section-list.tsx`  |
+| Device capabilities        | `src/shared/device/`                                         |
+| Unit tests                 | `*.test.tsx` alongside components; `toWeather.test.tsx`      |
 
 ## Reminders
 
