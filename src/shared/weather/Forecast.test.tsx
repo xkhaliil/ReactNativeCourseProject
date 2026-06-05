@@ -20,7 +20,7 @@ describe("Weather > Forecast", () => {
         day: "2026-06-06",
         temperatureMax: 26.7,
         temperatureMin: 17.4,
-        condition: "Rain",
+        condition: "Moderate Rain",
       },
     ])
 
