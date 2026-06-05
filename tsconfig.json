@@ -8,6 +8,8 @@
     "**/*.js",
     "**/*.ts",
     "**/*.tsx",
+    ".rnstorybook/**/*.ts",
+    ".rnstorybook/**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
   ]

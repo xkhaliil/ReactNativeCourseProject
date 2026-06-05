@@ -25,7 +25,7 @@ const STORAGE_KEY = "settings"
 
 const Context = createContext<
   | {
-      set: (settings: Settings) => void
+      set: (settings: Settings) => Promise<void>
       settings: Settings
     }
   | undefined
@@ -47,9 +47,9 @@ export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const value = useMemo(
     () => ({
-      set: (settings: Settings) => {
+      set: async (settings: Settings) => {
         setSettings(settings)
-        void AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
+        await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(settings))
       },
       settings,
     }),
@@ -66,7 +66,7 @@ export function useSettings(): Settings {
   return context.settings
 }
 
-export function useSettingsSetter(): (settings: Settings) => void {
+export function useSettingsSetter(): (settings: Settings) => Promise<void> {
   const context = useContext(Context)
   if (!context) throw new Error("Missing SettingsProvider.")
 

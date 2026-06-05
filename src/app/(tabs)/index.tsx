@@ -1,6 +1,5 @@
 import { StyleSheet, View } from "react-native"
 
-import Typography from "#design/elements/Typegraphy"
 import { CurrentWeather, Forecast, useCurrentLocation } from "#shared/weather"
 
 const App: React.FC = () => {
@@ -11,8 +10,6 @@ const App: React.FC = () => {
       <View style={styles.container}>
         <CurrentWeather location={location} />
         <Forecast location={location} />
-
-        <Typography href="/temp">Go to Temporary</Typography>
       </View>
     </>
   )

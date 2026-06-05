@@ -6,7 +6,8 @@ import TextField from "#design/elements/fields/Text"
 import FormGroup from "#design/elements/FormGroup"
 import Icon from "#design/elements/Icon"
 import { colors, spacing } from "#design/foundations"
-import { useFavoriteMutations } from "#features/favorites"
+
+import { useFavoriteMutations } from "./useFavorites"
 
 export const FavoriteEditForm: React.FC<{
   visible: boolean
