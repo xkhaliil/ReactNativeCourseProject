@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { type ReactElement, useState } from "react"
 
 import { Linking, StyleSheet, Text, View } from "react-native"
 
 import { Header } from "./Header"
 
-export const Page = () => {
+export const Page = (): ReactElement => {
   const [user, setUser] = useState<{ name: string } | undefined>()
 
   return (
@@ -26,7 +26,7 @@ export const Page = () => {
             style={[styles.a, { fontWeight: "bold" }]}
             role="link"
             onPress={() => {
-              Linking.openURL("https://componentdriven.org")
+              void Linking.openURL("https://componentdriven.org")
             }}
           >
             <Text>component-driven</Text>
@@ -41,7 +41,7 @@ export const Page = () => {
         <View>
           <Text>
             Use a higher-level connected component. Storybook helps you compose
-            such data from the "args" of child component stories
+            such data from the args of child component stories
           </Text>
           <Text>
             Assemble data in the page component from your services. You can mock
@@ -54,7 +54,7 @@ export const Page = () => {
             style={styles.a}
             role="link"
             onPress={() => {
-              Linking.openURL("https://storybook.js.org/tutorials/")
+              void Linking.openURL("https://storybook.js.org/tutorials/")
             }}
           >
             Storybook tutorials
@@ -64,7 +64,7 @@ export const Page = () => {
             style={styles.a}
             role="link"
             onPress={() => {
-              Linking.openURL("https://storybook.js.org/docs")
+              void Linking.openURL("https://storybook.js.org/docs")
             }}
           >
             docs

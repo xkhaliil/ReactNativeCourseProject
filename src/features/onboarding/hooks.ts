@@ -15,7 +15,6 @@ export function useOnboarding(): boolean | undefined {
       setValue(onboarded)
 
       if (!onboarded) {
-        // @ts-expect-error can't type check stored URL
         router.replace(`/onboarding?return=${route?.pathnameWithParams}`)
       }
     })()
@@ -36,7 +35,6 @@ export function useOnboardingDone(): () => Promise<void> {
 
     await setOnboarded()
 
-    // @ts-expect-error can't type check stored URL
     router.replace(route?.searchParams.get("return") ?? "/")
   }
 }

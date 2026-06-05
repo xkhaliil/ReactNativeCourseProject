@@ -2,6 +2,8 @@ import { type Meta, type StoryObj } from "@storybook/react-native"
 
 import { Header } from "./Header"
 
+const noop = (): void => undefined
+
 const meta = {
   title: "Example/Header",
   component: Header,
@@ -18,16 +20,16 @@ export const LoggedIn: Story = {
     user: {
       name: "Jane Doe",
     },
-    onLogin: () => {},
-    onLogout: () => {},
-    onCreateAccount: () => {},
+    onLogin: noop,
+    onLogout: noop,
+    onCreateAccount: noop,
   },
 }
 
 export const LoggedOut: Story = {
   args: {
-    onLogin: () => {},
-    onLogout: () => {},
-    onCreateAccount: () => {},
+    onLogin: noop,
+    onLogout: noop,
+    onCreateAccount: noop,
   },
 }

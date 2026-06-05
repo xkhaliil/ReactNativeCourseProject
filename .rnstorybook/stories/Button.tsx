@@ -1,7 +1,14 @@
-import type { StyleProp, ViewStyle } from "react-native"
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { type ReactElement } from "react"
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  type StyleProp,
+  type ViewStyle,
+} from "react-native"
 
-export interface ButtonProps {
+export type ButtonProps = {
   /** Is this the principal call to action on the page? */
   primary?: boolean
   /** What background color to use */
@@ -23,7 +30,7 @@ export const Button = ({
   label,
   style,
   onPress,
-}: ButtonProps) => {
+}: ButtonProps): ReactElement => {
   const modeStyle = primary ? styles.primary : styles.secondary
   const textModeStyle = primary ? styles.primaryText : styles.secondaryText
 

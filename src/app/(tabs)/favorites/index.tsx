@@ -18,7 +18,7 @@ const App: React.FC = () => {
 
       <View style={styles.container}>
         {favorites.map((favorite) => (
-          // TODO: List item with slide actions
+          // Future enhancement: list item with slide actions.
           <Typography key={favorite.name} href={`/favorites/${favorite.id}`}>
             {favorite.name}
           </Typography>

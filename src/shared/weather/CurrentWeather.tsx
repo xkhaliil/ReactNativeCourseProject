@@ -26,8 +26,8 @@ export const CurrentWeather: React.FC<{
 
   const doubleTap = Gesture.Tap()
     .numberOfTaps(2)
-    .onStart((event) => {
-      console.log("gesture: start", event)
+    .onStart(() => {
+      void hapticImpact()
     })
 
   return (

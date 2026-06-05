@@ -5,7 +5,13 @@ import { defineConfig, globalIgnores } from "eslint/config"
 import pluginExpo from "eslint-plugin-expo"
 
 export default defineConfig(
-  globalIgnores(["dist/", "web-build/", "coverage/"]),
+  globalIgnores([
+    "dist/",
+    "web-build/",
+    "coverage/",
+    "metro.config.js",
+    ".rnstorybook/storybook.requires.ts",
+  ]),
   config,
   {
     plugins: {

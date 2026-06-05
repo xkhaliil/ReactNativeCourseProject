@@ -1,3 +1,4 @@
+import { type ReactElement } from "react"
 import { StyleSheet, Text, View } from "react-native"
 
 import { Button } from "./Button"
@@ -14,7 +15,7 @@ export const Header = ({
   onLogin,
   onLogout,
   onCreateAccount,
-}: HeaderProps) => (
+}: HeaderProps): ReactElement => (
   <View>
     <View style={styles.wrapper}>
       <View style={styles.logoContainer}>
